@@ -70,3 +70,7 @@ export default {
     flowbite.plugin(),
   ],
 } satisfies Config;
+
+
+
+
