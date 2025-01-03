@@ -7,7 +7,7 @@ import { HiMail } from "react-icons/hi";
 
 export default function Contact() {
   return (
-    <div className="flex h-[60vh]">
+    <div id="contact" className="flex h-[60vh]">
       {/* Left Section */}
       <div className="bg-black text-white w-1/2 flex flex-col justify-center items-start p-8">
         <h1 className="font-bold text-5xl mb-4">Contact Me</h1>

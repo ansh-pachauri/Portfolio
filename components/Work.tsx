@@ -4,7 +4,7 @@ import { Card } from "@/components/Card";
 
 export const Work = () => {
     return (
-        <div className="min-h-screen bg-gray-50 flex flex-col items-center">
+        <div id="work" className="min-h-screen bg-gray-50 flex flex-col items-center">
             {/* Projects Heading */}
             <div className="bg-black text-white w-full py-8 text-center shadow-md">
                 <h1 className="text-5xl font-bold">Projects</h1>

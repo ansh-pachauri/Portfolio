@@ -31,7 +31,7 @@ const DATA = {
     social: {
       Contact: {
         name: "Contact Me",
-        url: "#",
+        url: "#contact",
         icon: Icons.contact,
       },
       
