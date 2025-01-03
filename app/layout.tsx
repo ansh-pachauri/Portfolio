@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       <style>
-          @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap') ;
+      @import url(&#39;https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap&#39;); ;
       </style>
       </head>
       <body

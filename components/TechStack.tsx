@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import Marquee from "./ui/marquee";
-
+import Image from "next/image";
 const reviews = [
   {
     name: "React JS",
@@ -60,7 +60,7 @@ const reviews = [
   },
   {
     name: "Next JS",
-    img: "favicon.ico",
+    img: "https://img.icons8.com/?size=100&id=yUdJlcKanVbh&format=png&color=000000",
   },
   
 ];
@@ -88,7 +88,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="40" height="40" alt="" src={img} />
+        <Image className="rounded-full" width="40" height="40" layout="responsive" alt="" src={img} />
         <div className="flex flex-col">
           <figcaption className="text-lg font-bold leading-tight dark:text-white">
             {name}

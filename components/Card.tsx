@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+
 interface CardProps {
   title: string;
   description: string;
@@ -10,10 +12,10 @@ interface CardProps {
 export const Card:React.FC<CardProps> = ({title,description,imageSrc, gitLink,demoLink}) => {
   return <div>
     <div className="relative group max-w-sm bg-gray-800 rounded-lg overflow-hidden shadow-md">
-  <img
+  <Image 
     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-    src={imageSrc}
-    alt="Project Screenshot"
+    src={imageSrc} 
+    alt="Project Screenshot" width={400} height={300} layout="responsive"
   />
   <div className="p-4 text-white">
     <h3 className="text-lg font-bold">{title}</h3>
