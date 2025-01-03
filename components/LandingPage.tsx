@@ -2,10 +2,19 @@
 import TypingAnimation from "./ui/typing-animation";
 import InteractiveHoverButton from "./ui/interactive-hover-button";
 import Link from "next/link";
+import {useEffect, useState } from "react";
 
 const LandingPage = () => {
+  
 
-
+  const [isClient, setIsClient] = useState(false);
+  
+    useEffect(() => {
+      setIsClient(true);
+    }, []);
+  
+    if (!isClient) return null;
+  
 
   return (
     <>
@@ -20,9 +29,11 @@ const LandingPage = () => {
              I build Websites.
         </p>
         <div className="flex gap-2 m-4">
+          
           <Link href="#work">
           <InteractiveHoverButton text="Projects" ></InteractiveHoverButton>
           </Link>
+          
 
         </div>
       </div>

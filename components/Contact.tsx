@@ -4,8 +4,27 @@
 
 import { Label, TextInput, Textarea } from "flowbite-react";
 import { HiMail } from "react-icons/hi";
-
+import { useState,FormEvent,useEffect } from "react";
 export default function Contact() {
+  
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log({ email, message });
+  };
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
+
+
   return (
     <div id="contact" className="flex h-[60vh]">
       {/* Left Section */}
@@ -26,6 +45,7 @@ export default function Contact() {
               id="email"
               type="email"
               icon={HiMail}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="your email address"
               required
             />
@@ -35,12 +55,13 @@ export default function Contact() {
             <Textarea
               id="comment"
               placeholder="Leave a comment..."
+              onChange={(e) => setMessage(e.target.value)}
               required
               rows={4}
             />
           </div>
           <button
-            type="submit"
+            type="submit" onClick={handleSubmit}
             className="bg-black text-white py-2 px-4 rounded hover:bg-gray-800 transition"
           >
             Send Message

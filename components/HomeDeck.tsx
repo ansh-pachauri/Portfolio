@@ -3,7 +3,6 @@
 import {  HomeIcon,Contact} from "lucide-react";
 import Link from "next/link";
 import React from "react";
-
 import  ModeToggle  from "@/components/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -40,11 +39,14 @@ const DATA = {
 };
 
 export function HomeDeck() {
+  
+  
+
   return (
     <div >
       
       <TooltipProvider>
-        <Dock direction="middle">
+        <Dock direction="middle" >
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
               <Tooltip>
