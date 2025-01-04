@@ -1,9 +1,10 @@
+
 "use client";
 
-import {  HomeIcon,Contact} from "lucide-react";
+import { HomeIcon, Contact } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import  ModeToggle  from "@/components/mode-toggle";
+import ModeToggle from "@/components/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -18,13 +19,12 @@ import { Dock, DockIcon } from "./ui/dock";
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const Icons = {
-    contact: (props: IconProps) => <Contact {...props} />
-}
+  contact: (props: IconProps) => <Contact {...props} />,
+};
 
 const DATA = {
   navbar: [
     { href: "#", icon: HomeIcon, label: "Home" },
-    
   ],
   contact: {
     social: {
@@ -33,20 +33,15 @@ const DATA = {
         url: "#contact",
         icon: Icons.contact,
       },
-      
     },
   },
 };
 
 export function HomeDeck() {
-  
-  
-
   return (
-    <div >
-      
+    <div>
       <TooltipProvider>
-        <Dock direction="middle" >
+        <Dock direction="middle">
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
               <Tooltip>
@@ -62,7 +57,6 @@ export function HomeDeck() {
                     <item.icon className="size-4" />
                   </Link>
                 </TooltipTrigger>
-                
               </Tooltip>
             </DockIcon>
           ))}
@@ -92,7 +86,7 @@ export function HomeDeck() {
           <DockIcon>
             <Tooltip>
               <TooltipTrigger asChild>
-                <ModeToggle  />
+                <ModeToggle />
               </TooltipTrigger>
               <TooltipContent>
                 <p>Theme</p>

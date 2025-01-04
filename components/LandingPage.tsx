@@ -1,20 +1,16 @@
-"use client"
+"use client";
 import TypingAnimation from "./ui/typing-animation";
-import InteractiveHoverButton from "./ui/interactive-hover-button";
-import Link from "next/link";
-import {useEffect, useState } from "react";
+// import InteractiveHoverButton from "./ui/interactive-hover-button";
+import { useEffect, useState } from "react";
 
 const LandingPage = () => {
-  
-
   const [isClient, setIsClient] = useState(false);
-  
-    useEffect(() => {
-      setIsClient(true);
-    }, []);
-  
-    if (!isClient) return null;
-  
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
 
   return (
     <>
@@ -25,17 +21,8 @@ const LandingPage = () => {
         <TypingAnimation className="font-mono text-5xl" duration={200}>
           I am a Full Stack Web Developer
         </TypingAnimation>
-        <p className="mt-3 text-xl ">
-             I build Websites.
-        </p>
-        
-          
-          <Link href="#work">
-          <InteractiveHoverButton text="Projects" ></InteractiveHoverButton>
-          </Link>
-          
+        <p className="mt-3 text-xl ">I build Websites.</p>
 
-        
       </div>
     </>
   );
