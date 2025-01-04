@@ -1,3 +1,6 @@
+
+"use client";
+
 import { cn } from "@/lib/utils";
 import Marquee from "./ui/marquee";
 import Image from "next/legacy/image";

@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import Image from "next/legacy/image";
 
@@ -14,7 +16,7 @@ export const Card:React.FC<CardProps> = ({title,description,imageSrc, gitLink,de
     <div className="relative group max-w-sm bg-gray-800 rounded-lg overflow-hidden shadow-md">
   <Image 
     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-    src={imageSrc} 
+    src={imageSrc} priority={true}
     alt="Project Screenshot" width={400} height={300} layout="responsive"
   />
   <div className="p-4 text-white">
